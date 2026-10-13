@@ -174,6 +174,17 @@
     $(id).addEventListener('input', function () { setErr(this, $(id + 'Err'), ''); });
   });
 
+
+  /* Команда: стрелки и счётчик для карусели на телефоне */
+  var team = document.querySelector('.team'), figs = team.children;
+  function teamStep() { return figs[0].getBoundingClientRect().width + 14; }
+  function teamIndex() { return Math.min(figs.length - 1, Math.round(team.scrollLeft / teamStep())); }
+  function teamUpdate() { $('teamCount').textContent = (teamIndex() + 1) + ' / ' + figs.length; }
+  $('teamPrev').addEventListener('click', function () { team.scrollBy({ left: -teamStep(), behavior: 'smooth' }); });
+  $('teamNext').addEventListener('click', function () { team.scrollBy({ left: teamStep(), behavior: 'smooth' }); });
+  team.addEventListener('scroll', teamUpdate, { passive: true });
+  teamUpdate();
+
   /* Плавное появление блоков при прокрутке */
   var items = document.querySelectorAll('.reveal');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

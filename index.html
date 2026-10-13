@@ -13,7 +13,7 @@
 <script>
 (function(){var d=document.documentElement;d.classList.add('js');try{if(localStorage.getItem('opora-theme')==='dark')d.setAttribute('data-theme','dark')}catch(e){}})();
 </script>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 <div class="page">
@@ -161,6 +161,11 @@
     <figure><img src="img/team-estimator.jpg" alt="Инженер-сметчик за чертежами" width="640" height="800" loading="lazy"><figcaption><b>[Андрей Мартынов]</b><div>Инженер-сметчик, стаж [9] лет</div></figcaption></figure>
     <figure><img src="img/team-designer.jpg" alt="Дизайнер интерьеров с палитрой образцов" width="640" height="800" loading="lazy"><figcaption><b>[Ольга Белова]</b><div>Дизайнер интерьеров</div></figcaption></figure>
   </div>
+  <div class="team-nav" aria-label="Листать команду">
+    <button type="button" id="teamPrev" aria-label="Предыдущий">&larr;</button>
+    <span id="teamCount" aria-live="polite">1 / 3</span>
+    <button type="button" id="teamNext" aria-label="Следующий">&rarr;</button>
+  </div>
 </section>
 
 <section class="tint reveal">
@@ -230,6 +235,6 @@
   </div>
 </footer>
 </div>
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>

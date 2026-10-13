@@ -319,3 +319,9 @@ input[type=range]{width:100%;accent-color:var(--accent);height:28px;margin:4px 0
   .team figure{flex:0 0 68%;scroll-snap-align:start}
 }
 @media (prefers-reduced-motion:no-preference){.team{scroll-behavior:smooth}}
+.team-nav{display:none}
+@media (max-width:640px){
+  .team-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px;font-weight:600;color:var(--muted)}
+  .team-nav button{width:48px;height:48px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--text);font-size:20px;cursor:pointer}
+  .team-nav button:active{transform:translateY(1px)}
+}
