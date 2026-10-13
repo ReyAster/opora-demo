@@ -191,7 +191,7 @@ input[type=range]{width:100%;accent-color:var(--accent);height:28px;margin:4px 0
 /* Команда */
 .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px}
 .team figure{margin:0}
-.team img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;background:var(--ph)}
+.team img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:16px;background:var(--ph)}
 .team figcaption{margin-top:12px}
 .team figcaption b{font-size:18px}
 .team figcaption div{color:var(--muted);font-size:15px}
@@ -311,3 +311,11 @@ input[type=range]{width:100%;accent-color:var(--accent);height:28px;margin:4px 0
   .js .reveal{opacity:1;transform:none;transition:none}
 }
 .field select{width:100%;padding:15px 16px;border-radius:12px;border:1.5px solid var(--inputLine);background:var(--inputBg);color:var(--text);font:inherit;font-weight:400}
+
+/* Телефон: команда листается каруселью, а не колонкой */
+@media (max-width:640px){
+  .team{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -24px;padding:0 24px 8px;scroll-padding-left:24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .team::-webkit-scrollbar{display:none}
+  .team figure{flex:0 0 68%;scroll-snap-align:start}
+}
+@media (prefers-reduced-motion:no-preference){.team{scroll-behavior:smooth}}
