@@ -49,7 +49,7 @@
 
   <div class="hero-text">
     <h1>Узнайте цену ремонта за&nbsp;30&nbsp;секунд</h1>
-    <p>Три вопроса справа, и вы увидите вилку стоимости. Подробная смета придёт в Telegram.</p>
+    <p>Три вопроса, и вы увидите вилку стоимости. Подробная смета придёт в Telegram.</p>
   </div>
 
   <div class="crane-col">
@@ -60,7 +60,7 @@
     <div class="trolley" aria-hidden="true"></div>
     <div class="hang">
       <div class="cable" aria-hidden="true"><i></i><i></i></div>
-      <svg class="hook" viewBox="0 0 40 44" aria-hidden="true"><rect x="8" y="0" width="24" height="18" rx="4" style="fill:var(--crane)"/><circle cx="20" cy="9" r="4" style="fill:var(--bg)"/><path d="M20 18v8c0 7 9 9 11 3" style="stroke:var(--accent);stroke-width:4;fill:none;stroke-linecap:round"/></svg>
+      <svg class="hook" viewBox="0 0 40 44" aria-hidden="true"><rect x="8" y="0" width="24" height="18" rx="4" style="fill:var(--crane)"/><circle cx="20" cy="9" r="4" style="fill:var(--bg)"/><path d="M20 18v14" style="stroke:var(--crane);stroke-width:3;fill:none"/><circle cx="20" cy="37" r="5" style="stroke:var(--accent);stroke-width:3.5;fill:none"/></svg>
       <svg class="slings" viewBox="0 0 440 30" preserveAspectRatio="none" aria-hidden="true"><path d="M220 0L28 30M220 0l192 30" style="stroke:var(--crane);stroke-width:2;fill:none" vector-effect="non-scaling-stroke"/></svg>
 
       <div class="quiz" id="quiz" aria-live="polite">
@@ -68,7 +68,7 @@
         <div class="q-panel" id="qResult" inert>
           <div class="q-sum" id="qSummary"></div>
           <div class="q-range" id="qRange"></div>
-          <div class="q-note">Ориентировочно, демо-расчёт. Точную цену назовём после замера.</div>
+          <div class="q-note">Ориентировочно, демо-расчёт. Точную цену назовём после уточнения деталей.</div>
           <form id="qForm" novalidate>
             <div class="field">
               <label for="qtg">Telegram или телефон</label>
@@ -93,7 +93,7 @@
 <section class="sec reveal" aria-label="Сезонное предложение">
   <div class="season">
     <div><b>Фундамент зимой на 10% дешевле</b><div>Заливаем с прогревом бетона. Предложение действует до [1 марта].</div></div>
-    <a class="btn" href="#form">Вызвать замерщика</a>
+    <a class="btn" href="#form">Обсудить проект</a>
   </div>
 </section>
 
@@ -113,7 +113,7 @@
 <section id="estimate" class="receipt reveal">
   <div>
     <h2 class="h2">Строите дом? Посчитайте смету</h2>
-    <p class="lead">Выберите этажность и площадь. Каждую строку подтвердим на бесплатном замере, а итог закрепим в договоре.</p>
+    <p class="lead">Выберите этажность и площадь. Каждую строку обсудим с вами, а итог закрепим в договоре.</p>
   </div>
   <div class="check">
     <div class="check-head"><b>Смета на дом</b><span>демо-расчёт</span></div>
@@ -207,12 +207,13 @@
 
 <section id="form" class="sec reveal" style="padding-bottom:96px">
   <div class="form-box">
-    <div><h2 class="h2">Приедем на замер</h2><p>Бесплатно, в Москве и области. Перезвоним в течение часа.</p></div>
+    <div><h2 class="h2">Обсудим ваш проект</h2><p>Расскажите, что хотите построить или отремонтировать. Перезвоним в течение часа, ответим на вопросы и подскажем следующий шаг.</p></div>
     <div>
       <form id="mForm" novalidate>
         <div class="field"><label for="mname">Имя</label><input id="mname" name="name" type="text" autocomplete="name" aria-describedby="mnameErr"><div class="err" id="mnameErr"></div></div>
+        <div class="field"><label for="mtopic">Что интересует</label><select id="mtopic" name="topic"><option>Строительство дома</option><option>Ремонт квартиры</option><option>Коммерческое помещение</option><option>Пока не знаю, нужна консультация</option></select></div>
         <div class="field"><label for="mtel">Телефон</label><input id="mtel" name="tel" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="mtelErr"><div class="err" id="mtelErr"></div></div>
-        <button class="btn btn-full" type="submit">Вызвать замерщика</button>
+        <button class="btn btn-full" type="submit">Обсудить проект</button>
         <div class="fine">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>. Демо-режим: данные никуда не отправляются.</div>
       </form>
       <div class="form-ok" id="mOk" role="status" tabindex="-1"><b>Спасибо!</b><span class="fine">Мы перезвоним в течение часа. Это демо: заявка никуда не отправлена.</span></div>

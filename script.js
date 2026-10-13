@@ -159,7 +159,7 @@
   ['pointerup', 'pointercancel'].forEach(function (t) { baView.addEventListener(t, function () { dragging = false; }); });
   setBa(50);
 
-  /* Форма замера (демо: ничего не отправляет) */
+  /* Форма «Обсудим проект» (демо: ничего не отправляет) */
   $('mForm').addEventListener('submit', function (e) {
     e.preventDefault();
     var n = $('mname'), t = $('mtel'), ok = true;

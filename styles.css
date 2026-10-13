@@ -14,10 +14,10 @@
   color-scheme:light;
 }
 :root[data-theme="dark"]{
-  --bg:#141518;--card:#1D1F23;--soft:#23262B;--text:#ECEAE4;--muted:#A7A49C;--line:#34373D;
-  --accent:#E3B23C;--accentInk:#141518;--accentText:#E3B23C;--accentSub:#4A3C12;
-  --ph:#23262B;--phLine:rgba(255,255,255,.035);--phText:#9C998F;
-  --inputLine:#4A4D54;--inputBg:#141518;--crane:#8E8B84;--dot:rgba(255,255,255,.05);
+  --bg:#0E161B;--card:#15222A;--soft:#1B2B35;--text:#E9EFF2;--muted:#9DB0BA;--line:#2B3E49;
+  --accent:#FF7A3D;--accentInk:#0E161B;--accentText:#FF8F5C;--accentSub:#3D1B09;
+  --ph:#1B2B35;--phLine:rgba(255,255,255,.035);--phText:#9DB0BA;
+  --inputLine:#4C6573;--inputBg:#0E161B;--crane:#8CA3AF;--dot:rgba(255,255,255,.05);
   --shadow:0 24px 50px rgba(0,0,0,.35);--error:#FF8A80;
   color-scheme:dark;
 }
@@ -65,7 +65,7 @@ button{font:inherit}
 .sec{max-width:1200px;margin:0 auto;padding:0 24px 104px}
 
 /* Первый экран с краном */
-.hero-crane{position:relative;max-width:1200px;margin:0 auto;min-height:860px;padding:0 160px 72px 24px;display:grid;grid-template-columns:minmax(0,1fr) 420px;column-gap:36px;align-items:start}
+.hero-crane{position:relative;max-width:1200px;margin:0 auto;min-height:790px;padding:0 160px 56px 24px;display:grid;grid-template-columns:minmax(0,1fr) 420px;column-gap:36px;align-items:start}
 .ground{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--line)}
 .base{position:absolute;right:38px;bottom:0;width:72px;height:16px;background:var(--crane);border-radius:3px 3px 0 0}
 .mast{position:absolute;right:56px;top:34px;bottom:16px;width:36px;border-left:3px solid var(--crane);border-right:3px solid var(--crane);background-image:linear-gradient(to bottom,var(--crane) 0 2px,transparent 2px),linear-gradient(to top right,transparent calc(50% - 1.2px),var(--crane) calc(50% - 1.2px) calc(50% + 1.2px),transparent calc(50% + 1.2px)),linear-gradient(to bottom right,transparent calc(50% - 1.2px),var(--crane) calc(50% - 1.2px) calc(50% + 1.2px),transparent calc(50% + 1.2px));background-size:100% 30px}
@@ -78,7 +78,7 @@ button{font:inherit}
 .weights i{display:block;width:40px;height:13px;background:var(--crane);border-radius:2px}
 .cab{position:absolute;right:96px;top:88px;width:38px;height:34px;border-radius:4px 4px 6px 6px;background:var(--accent)}
 .cab::after{content:"";position:absolute;left:6px;right:6px;top:6px;height:12px;border-radius:3px;background:var(--bg);opacity:.85}
-.hero-text{position:relative;z-index:2;padding-top:168px;max-width:500px}
+.hero-text{position:relative;z-index:2;padding-top:150px;max-width:500px}
 .hero-text h1{font-weight:800;font-size:clamp(38px,4.6vw,58px);line-height:1.04;letter-spacing:-.03em;margin:0 0 22px}
 .hero-text p{font-size:19px;line-height:1.55;color:var(--muted);margin:0;max-width:440px}
 .crane-col{position:relative;z-index:3}
@@ -87,25 +87,25 @@ button{font:inherit}
 .trolley::before{left:6px}.trolley::after{right:6px}
 .hang{position:relative;z-index:1;margin-top:98px;display:flex;flex-direction:column;align-items:center;transform-origin:50% 0;animation:sway 4.2s ease-in-out infinite alternate}
 .hang:hover,.hang:focus-within{animation-play-state:paused}
-.cable{display:flex;gap:4px;height:58px}
+.cable{display:flex;gap:4px;height:40px}
 .cable i{display:block;width:1.5px;height:100%;background:var(--crane)}
-.hook{display:block;width:40px;height:44px}
-.slings{display:block;width:100%;height:30px}
+.hook{display:block;width:40px;height:44px;position:relative;z-index:1}
+.slings{display:block;width:100%;height:30px;margin-top:-3px}
 @keyframes sway{from{transform:rotate(-1.5deg)}to{transform:rotate(1.5deg)}}
 .m-crane{display:none}
 
 /* Карточка-квиз: все шаги в одной ячейке, высота по самому высокому */
-.quiz{width:100%;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow);display:grid}
+.quiz{width:100%;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:24px 28px;box-shadow:var(--shadow);display:grid}
 .q-panel{grid-area:1/1;min-width:0}
 .q-panel[inert]{visibility:hidden}
 .q-top{display:flex;justify-content:space-between;align-items:center;min-height:44px;margin-bottom:8px}
 .q-step{font-size:14px;color:var(--muted)}
 .link-btn{background:none;border:none;font-size:14px;color:var(--muted);cursor:pointer;min-height:44px;padding:0 4px;text-decoration:underline;text-underline-offset:3px}
 .link-btn:hover{color:var(--text)}
-.q-title{font-weight:800;font-size:26px;letter-spacing:-.01em;margin:0 0 18px;line-height:1.2}
+.q-title{font-weight:800;font-size:26px;letter-spacing:-.01em;margin:0 0 14px;line-height:1.2}
 .q-title:focus{outline:none}
 .opts{display:grid;gap:10px}
-.opt{min-height:56px;padding:0 18px;text-align:left;background:var(--soft);border:1.5px solid var(--line);border-radius:12px;font-size:16px;font-weight:600;color:var(--text);cursor:pointer;transition:border-color .15s ease,transform .15s ease}
+.opt{min-height:52px;padding:0 18px;text-align:left;background:var(--soft);border:1.5px solid var(--line);border-radius:12px;font-size:16px;font-weight:600;color:var(--text);cursor:pointer;transition:border-color .15s ease,transform .15s ease}
 .opt:hover{border-color:var(--accent)}
 .opt:active{transform:translateY(1px)}
 .opt[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
@@ -277,7 +277,7 @@ input[type=range]{width:100%;accent-color:var(--accent);height:28px;margin:4px 0
   .m-mast{position:absolute;right:18px;top:34px;bottom:0;width:28px;border-left:3px solid var(--crane);border-right:3px solid var(--crane);background-image:linear-gradient(to bottom,var(--crane) 0 2px,transparent 2px),linear-gradient(to top right,transparent calc(50% - 1.2px),var(--crane) calc(50% - 1.2px) calc(50% + 1.2px),transparent calc(50% + 1.2px)),linear-gradient(to bottom right,transparent calc(50% - 1.2px),var(--crane) calc(50% - 1.2px) calc(50% + 1.2px),transparent calc(50% + 1.2px));background-size:100% 26px}
   .m-cab{position:absolute;right:50px;top:86px;width:30px;height:28px;border-radius:4px;background:var(--accent)}
   .m-base{position:absolute;right:6px;bottom:0;width:52px;height:12px;background:var(--crane);border-radius:3px 3px 0 0}
-  .crane-col .trolley{top:84px;left:38%}
+  .crane-col .trolley{top:84px}
   .hang{margin-top:96px}
   .h2{font-size:34px}
   .receipt{gap:40px}
@@ -310,3 +310,4 @@ input[type=range]{width:100%;accent-color:var(--accent);height:28px;margin:4px 0
   .faq summary::after{transition:none}
   .js .reveal{opacity:1;transform:none;transition:none}
 }
+.field select{width:100%;padding:15px 16px;border-radius:12px;border:1.5px solid var(--inputLine);background:var(--inputBg);color:var(--text);font:inherit;font-weight:400}
